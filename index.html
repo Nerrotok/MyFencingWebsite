@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link rel="stylesheet" href="stylesheets/style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="scripts/fencing.js"></script>
+  </head>
+  <body class="body">
+    <!-- div to organise elements -->
+    <div class="container--row">
+      <!-- div to add lines to sides of page -->
+      <div class="decoration"></div>
+      <div class="content">
+        <div class="content__element">
+        <!-- Page header -->
+        <h1 class="header" id="homePageHeader">
+          <div class="header__logo">&#9876</div> 
+          <div class="header__text">Connor's Fencing Blog</div>
+        </h1>
+      
+        <!-- Navigation links -->
+        <h3 class="subHeader__header--navReveal">Show Pages &#8595</h3>
+        <h3 class="subHeader__header--navHide">Hide Pages ↑</h3>
+        <div class="nav">
+          <a class="nav__link" href="index.html">Home</a> 
+          <a class="nav__link" href="pages/game.html">The Game</a>
+          <a class="nav__link" href="pages/safencing.html">Fencing in South Africa</a>
+          <a class="nav__link" href="pages/saved.html">Saved Contents</a>
+        </div></div>
+        <!-- Information about fencing below -->
+      <div class="content__element">
+        <div class="container--rowLeft">
+        <h2 class="subHeader">&#10022 What is fencing?! &#10022</h2>
+        <button class="likeButton" id="intro__likeButton">
+          <svg
+          class="likeHeart" 
+          xmlns="http://www.w3.org/2000/svg" 
+          width="24" 
+          height="24" 
+          viewBox="0 0 24 24">
+          <path
+          d="M12 9.229c.234-1.12 1.547-6.229 5.382-6.229 2.22 0 4.618 1.551 4.618 5.003 0 3.907-3.627 8.47-10 12.629-6.373-4.159-10-8.722-10-12.629 0-3.484 2.369-5.005 4.577-5.005 3.923 0 5.145 5.126 5.423 6.231zm-12-1.226c0 4.068 3.06 9.481 12 14.997 8.94-5.516 12-10.929 12-14.997 0-7.962-9.648-9.028-12-3.737-2.338-5.262-12-4.27-12 3.737z"/>
+        </svg>
+      </button>
+      </div>
+        <img class="image--smaller" src="images/piste.jpg" alt="A detailed diagram of a fencing piste">
+        <p class="text">
+          Fencing is a sport where two people (fencers) play tag with metal
+          sticks (blades) on a 14m by 1.5m area (piste). Points are decided by a
+          referee aided by a scoring box which is attached to the fencers’
+          weapons through wires. The game is technically, mechanically,
+          tactically, and strategically complex.
+          <button class="saveButton">Save</button>
+        </p>
+
+        </div>
+
+        <!-- site decoration -->
+        <div class="background--black"></div>
+
+        <div class="content__element">
+      <div class="container--rowLeft">
+        <h2 class="subHeader">&#10022 The weapons &#10022</h2>
+        <button class="likeButton" id="weapons__likeButton">
+          <svg
+          class="likeHeart" 
+          xmlns="http://www.w3.org/2000/svg" 
+          width="24" 
+          height="24" 
+          viewBox="0 0 24 24">
+          <path 
+          d="M12 9.229c.234-1.12 1.547-6.229 5.382-6.229 2.22 0 4.618 1.551 4.618 5.003 0 3.907-3.627 8.47-10 12.629-6.373-4.159-10-8.722-10-12.629 0-3.484 2.369-5.005 4.577-5.005 3.923 0 5.145 5.126 5.423 6.231zm-12-1.226c0 4.068 3.06 9.481 12 14.997 8.94-5.516 12-10.929 12-14.997 0-7.962-9.648-9.028-12-3.737-2.338-5.262-12-4.27-12 3.737z"/>
+        </svg>
+      </button>
+      </div>
+        <!-- List detailing each weapon with links to examples -->
+        <ul class="list">
+        
+          <!-- information on foil -->
+          <li class="list__item">
+            <h3 class="list__header">Foil</h3>
+            <div class="list__flexHolder">
+            <div class="list__container--highlightedYellow">
+              
+            <p class="list__text--paddingTop">
+              Foil is often the first weapon a fencer will hold as it is the
+              lightest and was originally intended to teach a fencer the key
+              fundamental skills that will most benefit them in duelling. Points
+              are scored by depressing the tip of the weapon on the opponent’s
+              valid target area.
+              <button class="saveButton">Save</button> 
+            </p>
+
+            <p class="list__text--paddingBottom">The referee decides if points are awarded based
+              on which fencer has the right to attack and whether they hit their
+              opponent on the torso. The fencing is characterised by a back and
+              forth as fencers try to gain the right to attack to score points
+              on a challenging and defended target area. Here are two of the
+              best
+              <a class="link"
+                href="https://www.youtube.com/watch?v=D3jlAOK-xlU"
+                target="_blank"
+                >Timur Safin</a
+              >
+              and
+              <a class="link"
+                href="https://www.youtube.com/watch?v=BuSRmQGFKWA"
+                target="_blank"
+                >Lee Kiefer</a
+              >
+              <button class="saveButton">Save</button>
+            </p>
+          </div>
+            <img class="list__image" src="images/foilImage.jpg" alt="Two foil fencers fencing" /></div>
+          </li>
+          <!-- information on sabre -->
+          <li class="list__item">
+            <h3 class="list__header">Sabre</h3>
+            <div class="list__flexHolder">
+            <div class="list__container--highlightedBlue">
+            <p class="list__text--paddingTop">
+              Sabre is for people who like to pretend they are horses and enjoy
+              galloping at their opponent. The entire blade is valid for scoring
+              points (not just the tip) and the body above the waist (excluding
+              hands) is the valid target area. Sabre is the only weapon where
+              fencers may not cross their legs (encouraging
+              <a class="link"
+                href="https://www.youtube.com/watch?v=dL1GbQRFvlU"
+                target="_blank"
+                >horse-like behaviour</a
+              >).
+              <button class="saveButton">Save</button> 
+            </p>
+            <p class="list__text--paddingBottom">The referee decides if points are awarded based on which
+              fencer has the right to attack and whether they have hit their
+              opponent above the waist. Sabre fencing is characterised by attacking
+              fencing as it is greatly favoured due to the large
+              target area making defense difficult with the blade.
+              Explosive footwork is often rewarded. Here are
+              highlight reels from a
+              <a class="link"
+                href="https://www.youtube.com/watch?v=TwYwWSO_Rmg"
+                target="_blank"
+                >Women's Sabre Grand Prix</a
+              >
+              and
+              <a class="link"
+                href="https://www.youtube.com/watch?v=VXNgl_7sRXw"
+                target="_blank"
+                >3X Olympic Champion, Áron Szilágyi</a
+              >
+              <button class="saveButton">Save</button></p></div>
+            <img class="list__image" src="images/sabreImage.jpg" alt="Two sabre fencers fencing" /></div>
+          </li>
+          <li class="list__item">
+            <!-- information on epee -->
+            <h3 class="list__header">Epee</h3>
+            <div class="list__flexHolder">
+            <div class="list__container--highlightedRed">
+            <p class="list__text--paddingTop">
+              Epee has the most straightforward ruleset. A referee Points awards
+              points based on whether a fencer touches their opponent anywhere
+              on the body. It is the only weapon where there are no rules
+              regarding a right to attack. It is the only weapon where both
+              fencers can score a point at the same time due to there being no
+              right to attack rules.
+              <button class="saveButton">Save</button></p>
+              
+              <p class="list__text--paddingBottom">Epee fencing is most often characterised by
+              patient fencing where each fencer tries to create a gap wide
+              enough to score a point while not being hit themselves. There is a
+              lot of testing of each other’s reactions and responses while
+              finding timings. Here are two compilations of some of the best,
+              <a class="link"
+                href="https://www.youtube.com/watch?v=P0Okz8e3fc4"
+                target="_blank"
+                >World Championships Women's Epee 2022</a
+              >
+              and
+              <a class="link"
+                href="https://www.youtube.com/watch?v=aiE2MMy-XWI"
+                target="_blank"
+                >World Championships Men's Epee 2023</a
+              >. Here's one of the
+              <a class="link"
+                href="https://www.youtube.com/watch?v=SsXCGHFQITE"
+                target="_blank"
+                >best bouts</a
+              >
+              as well.
+              <button class="saveButton">Save</button>
+            </p></div>
+            <img class="list__image" src="images/epeeImage.jpg" alt="Two epee fencers fencing"/></div>
+          
+          </li>
+        </ul></div>
+        <div class="content__element">
+        <!-- Section for the history of fencing and weaponplay -->
+        <div class="container--rowLeft">
+        <h2 class="subHeader">&#10022 How did it start? &#10022</h2>
+        <button class="likeButton" id="history__likeButton" >
+          <svg
+          class="likeHeart" 
+          xmlns="http://www.w3.org/2000/svg" 
+          width="24" 
+          height="24" 
+          viewBox="0 0 24 24">
+          <path 
+          d="M12 9.229c.234-1.12 1.547-6.229 5.382-6.229 2.22 0 4.618 1.551 4.618 5.003 0 3.907-3.627 8.47-10 12.629-6.373-4.159-10-8.722-10-12.629 0-3.484 2.369-5.005 4.577-5.005 3.923 0 5.145 5.126 5.423 6.231zm-12-1.226c0 4.068 3.06 9.481 12 14.997 8.94-5.516 12-10.929 12-14.997 0-7.962-9.648-9.028-12-3.737-2.338-5.262-12-4.27-12 3.737z"/>
+        </svg>
+      </button>
+      </div>
+        <div class="container--row">
+        
+        <img class="image" src="images/stickFighting.jpg" alt="Two Nguni men stick fighting">
+        <p class="text">
+          
+          Weaponplay (sport form of trying to hit someone without getting hit
+          with an object) can be seen in probably every culture with a martial
+          history.
+          <a class="link" href="https://www.youtube.com/watch?v=uP495vC76kU" target="_blank"
+            >Nguni Stick Fighting
+          </a>
+          ,
+          <a class="link" href="https://www.youtube.com/watch?v=KpjWDUp-5yc" target="_blank"
+            >Kendo</a
+          >
+          and
+          <a class="link" href="https://www.youtube.com/watch?v=7ZLzVXf7GfM" target="_blank"
+            >Kali</a
+          >
+          are other forms of weaponplay which are also still practiced today.
+          <a class="link"
+            href="https://olympics.com/en/paris-2024/sports/fencing"
+            target="_blank"
+            >The Olympics Website</a
+          >
+          will mention ancient Egyptian depictions of weaponplay to allow
+          fencing to enjoy more history than it can really claim (maybe also to
+          appeal to a sense of universalism).
+          The Fencing which is at the Olympics has a much more recent history.
+          <button class="saveButton">Save</button>
+        </p>
+      </div>
+      <!-- deocration using yellow block -->
+      <div class="background--yellow"></div>
+        <div class="container--row">
+          <p class="text">Fencing as a sport developed out of
+          <a class="link" href="https://www.youtube.com/watch?v=bZR-GpCaIzY" target="_blank"
+            >European weapon based martial arts</a
+          >
+          (these have seen a resurgence due to fencing's more sporty and gamey
+          direction, some people want to learn a martial art, not a sport).
+          There are treatises written instructing European weapon based martial
+          arts from around 1300. The sport was initially created for military
+          training and by the mid-1700s had become an amateur and recreational
+          sport. One figure who aided in this transition was
+          <a class="link"
+            href="https://www.britannica.com/biography/Domenico-Angelo"
+            target="_blank"
+            >Domenico Angelo</a
+          >. In the 1800s regularised bodies started forming in many countries
+          and by 1896 official regulations were created ahead of the first
+          summer Olympics that year.
+          <button class="saveButton">Save</button>
+        </p><img class="image"
+        src="images/DomenicoAngelo.jpg"
+        alt="Old print of Domenico Angelo and another fencer fencing"
+      />
+        </div>
+        <!-- deocration using green block -->
+        <div class="background--green"></div>
+        <!-- information on where the sport has a presence -->
+        <div class="container--row">
+          <img 
+          class="image"
+          src="images/olympicPodium.jpg"
+          alt="Olympic team event podium with athletes wearing their medals"
+        />
+        <p class="text">
+          The sport’s inclusion in the Olympics is easily what has allowed the
+          sport to grow into one with contenders and champions from all over the
+          world with different backgrounds. Europe has always maintained a
+          strong presence in the sport, most consistently has been Italy,
+          France, and Hungary although pretty much anywhere in Europe, there is
+          a presence. In the Americas, USA and Canada maintain long held
+          strength although Venezuela has done extremely well in recent years.
+          Cuba (much like Britain) have fallen off in more recent years. In
+          Africa, Egypt has made huge strides over the past twenty years.
+          Morocco, Algeria, Tunisia and South Africa also maintain some presence
+          in the sport. In Asia, Russia, China, Japan and South Korea have
+          maintained a high level of fencing since the turn of the millenium.
+          Each of these countries boasting Olympic Champions in the most recent
+          Olympics.
+          <button class="saveButton">Save</button>
+        </p>
+      
+      </div>
+      <!-- deocration using black block -->
+        <div class="background--black"></div>
+        
+
+        <p class="text">
+          The sport is widespread as a result but remains relatively small in
+          each country for a variety of reasons. The accessibility of the sport
+          is limited as the it is expensive with most people only being exposed
+          to it once every 4 years when the Olympics is on.
+          <button class="saveButton">Save</button>
+        </p>
+      </div>
+
+      <!-- Information on what is required to fence -->
+        <div class="content__element">
+
+          <div class="container--rowLeft">
+        <h2 class="subHeader">&#10022 What are the requirements for fencing? &#10022</h2>
+        <button class="likeButton" id="requirements__likeButton">
+          <svg 
+          class="likeHeart"
+          xmlns="http://www.w3.org/2000/svg" 
+          width="24" 
+          height="24" 
+          viewBox="0 0 24 24">
+          <path 
+          d="M12 9.229c.234-1.12 1.547-6.229 5.382-6.229 2.22 0 4.618 1.551 4.618 5.003 0 3.907-3.627 8.47-10 12.629-6.373-4.159-10-8.722-10-12.629 0-3.484 2.369-5.005 4.577-5.005 3.923 0 5.145 5.126 5.423 6.231zm-12-1.226c0 4.068 3.06 9.481 12 14.997 8.94-5.516 12-10.929 12-14.997 0-7.962-9.648-9.028-12-3.737-2.338-5.262-12-4.27-12 3.737z"/>
+        </svg>
+      </button>
+      </div>
+<div class="container--row">
+  <div class="container--column">
+          
+<!-- inforation for fencing equipment -->
+    <img class="image" src="images/fencingKit.jpg" alt="Fencing equipment" />
+    <h3 class="subHeader__header">Equipment</h3>
+  <p class="text">
+    You should have a blade (epee, foil or sabre), a body-wire (body-cord
+    if American), a mask, jacket, plastron, glove, breeches (knickers if
+    American), and a breastplate should you have breasts to plate.
+    The ESSENTIALS of these are the protective gear. Fencing has
+    maintained a relatively
+    <a class="link" href="https://pubmed.ncbi.nlm.nih.gov/31596752/" target="_blank"
+      >low injury rate</a
+    >
+    because of this protective equipment (most injuries tend to be caused
+    by repetitive strain). Make sure you wear protective equipment and
+    check that it has a badge showing how much protection it offers (usually 350 Newtons or 800 Newtons) or at
+    least feels like you wouldn’t be able to puncture it with a blade.
+    <button class="saveButton">Save</button>
+  </p>
+
+  <!-- podium style for 3rd -->
+  <div class="container__podium--third"> 
+    <div class="podium__number">3</div>
+  </div>
+</div>
+  <div class="container--columnBordered">
+  
+    <img class="image"
+    src="images/paraFencing.jpg"
+    alt="Two people in wheelchairs fencing"
+  />
+  <!-- Information regarding para-fencing -->
+  <h3 class="subHeader__header">Body</h3>
+          <p class="text">
+            A body which you inhabit. If you do not have 4
+            working limbs, look for
+            <a class="link" href="https://www.youtube.com/watch?v=dKUrKpSlHD0" target="_blank"
+              >para-fencing</a
+            >. The main difference is no footwork. Techically demanding blade
+            actions, strong balance with co-ordination and mind-games are all
+            still there.
+            <button class="saveButton">Save</button>
+          </p>
+          <!-- podium style for 1st -->
+          <div class="container__podium--first"> 
+            <div class="podium__number">1</div>  
+          </div>
+          </div>
+        <div class="container--columnBordered">
+        <img class="image--clean"
+          src="images/fencingClub.jpg"
+          alt="Rows of people fencing in a club hall"
+        />
+        <h3 class="subHeader__header">Competitors</h3>
+        <p class="text">
+          The most important requirement (like almost any competitive sport) is
+          other people to fence against. For most people, this means a club.
+          Almost every club should have equipment and some way to onboard
+          beginners without committing too much money to the sport initially. A
+          club should ideally have a coach, other fencers, and enough equipment
+          to fence with. There should be at least one box with working reels or
+          transmitters.
+          <button class="saveButton">Save</button>
+        </p>
+        <!-- podium style for 2nd -->
+        <div class="container__podium--second">
+          <div class="podium__number">2</div>
+      </div>
+    </div>
+        
+       
+      </div>
+      <div class="content__element">
+        <h2 class="subHeader">Comments</h2>
+          <form class="form">
+            <textarea id="makeComment" class="form__textArea" cols="50" rows="5" placeholder="Write your comment..."></textarea>
+            
+            <input id="commentButton" class="form__button" type="submit" value="Comment"/>
+          </form>
+
+          <div id="commentsContainer" class="container--column"></div>
+      </div>
+        <a class="toTopLink" href="#">To Top ↑</a>
+      
+      <!-- div to add lines to sides of page -->
+    </div></div>
+      <div class="decoration"></div>
+    </div>
+  </body>
+</html>
