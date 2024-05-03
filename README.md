@@ -7,14 +7,14 @@ The site displays my competency in html, javascript and css through the website'
 
 ## Table of contents
 
-1. **Installation** 
-2. **Usage**
-  * All Pages
-  * Home Page
-  * The Game of Fencing
-  * Fencing in South Africa
-  * Saved Content
-3. **Credits**
+1. [**Installation**](#installation) 
+2. [**Usage**](#usage)
+   * [All Pages](#all-pages)
+   * [Home Page](#home-page)
+   * [The Game of Fencing](#the-game-of-fencing)
+   * [Fencing in South Africa](#fencing-in-south-africa)
+   * [Saved Content](#the-game-of-fencing)
+3. [**Credits**](#credits)
 
 ## Installation 
 
@@ -24,7 +24,7 @@ If the site is not being hosted, download the files from this repository into a 
 
 ## Usage 
 
-##### All Pages
+### All Pages
 
 You can navigate to other pages on the site using by clicking on "Show Pages↓"
 ![showPages](https://github.com/Nerrotok/MyFencingWebsite/assets/140401659/32819b98-6c3f-48f7-be0a-667ade2a14ed)
@@ -39,7 +39,7 @@ At the bottom of each page there will be a link that will navigate to the top of
 ![toTopLink](https://github.com/Nerrotok/MyFencingWebsite/assets/140401659/0bcc08f4-5ad1-4ce3-a6a1-5bc2269e2906)
 
 
-###### Home Page
+### Home Page
 
 The homepage of the website will look like this.
 ![home_page](https://github.com/Nerrotok/MyFencingWebsite/assets/140401659/41bc1156-5d12-408f-b5ac-53044f9401dc)
@@ -54,7 +54,7 @@ After writing a comment, you can post it by clicking comment.
 
 The comments are **not stored and will be removed if the page is refreshed**.
 
-##### The Game of Fencing
+### The Game of Fencing
 
 The page will look like this.
 ![theGamePage](https://github.com/Nerrotok/MyFencingWebsite/assets/140401659/7732a0e6-abbf-4b63-9f4f-1bede80ce848)
@@ -72,14 +72,14 @@ Afterwards there will be an image representing the outcome of your choice.
 Further down the page there is an animation which can be played by clicking the _*ALLEZ!*_ button.
 ![allez](https://github.com/Nerrotok/MyFencingWebsite/assets/140401659/44282245-91e7-4b7d-99b1-2385576a41bd)
 
-##### Fencing in South Africa
+### Fencing in South Africa
 
 This page details the experience of fencing in South Africa along with links to get in touch with the South African fencing community and federation. It includes estimated costs associated with fencing in South Africa and details on what competing is like.
 
 The bottom of the page has a form to contact me which **does not** function currently.
 ![contactMeForm](https://github.com/Nerrotok/MyFencingWebsite/assets/140401659/6b63535e-f8be-4b9c-94a1-eba812f434dd)
 
-##### Saved Content
+### Saved Content
 
 The saved content page displays all paragraphs that have been saved by the user using the "Save" buttons.
 
