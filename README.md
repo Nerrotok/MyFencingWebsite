@@ -13,7 +13,7 @@ The site displays my competency in html, javascript and css through the website'
    * [Home Page](#home-page)
    * [The Game of Fencing](#the-game-of-fencing)
    * [Fencing in South Africa](#fencing-in-south-africa)
-   * [Saved Content](#the-game-of-fencing)
+   * [Saved Content](#saved-content)
 3. [**Credits**](#credits)
 
 ## Installation 
