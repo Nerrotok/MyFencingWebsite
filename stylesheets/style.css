@@ -372,6 +372,7 @@ FONT SIZE SYSTEM (px)
 .container--rowWhite {
   background-color: white;
   width: 100vh;
+  height: 140px;
   align-items: center;
 }
 
@@ -494,6 +495,7 @@ FONT SIZE SYSTEM (px)
   padding-right: 24px;
   font-style: italic;
   font-weight: lighter;
+  width: 100vh;
 }
 
 /* style for colour bands in page-headers */

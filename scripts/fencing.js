@@ -1,4 +1,20 @@
 $(document).ready(function () {
+  // Function to make comments
+  function commentMaker(textToComment) {
+    let dt = new Date();
+    let dayToUse =
+      dt.getDate() + " : " + (dt.getMonth() + 1) + " : " + dt.getFullYear();
+    let comment =
+      "<p class='form__comment'>" +
+      dayToUse +
+      "<br>" +
+      "<b> Commentor said: </b> </br>" +
+      textToComment +
+      "</p>";
+
+    return comment;
+  }
+
   // Conditions for website intialisation
   if (localStorage.getItem("savedContentStorage") === null) {
     let savedContentArray = [];
@@ -7,9 +23,20 @@ $(document).ready(function () {
       JSON.stringify(savedContentArray)
     );
   }
-  $(".nav").hide();
-  $(".subHeader__header--navHide").hide();
-  $(".rps__image").hide();
+
+  if (localStorage.getItem("commentStorage") === null) {
+    let commentArray = [];
+    localStorage.setItem("commentStorage", JSON.stringify(commentArray));
+  } else {
+    commentArray = JSON.parse(localStorage.getItem("commentStorage"));
+
+    for (let i = 0; i < commentArray.length; i++) {
+      let commentToMake = commentArray[i];
+      let commentToAppend = commentMaker(commentToMake);
+      $("#commentsContainer").append(commentToAppend);
+    }
+  }
+
   let stepArray = [
     "50px",
     "100px",
@@ -30,6 +57,10 @@ $(document).ready(function () {
     "50px",
     "0px",
   ];
+
+  $(".nav").hide();
+  $(".subHeader__header--navHide").hide();
+  $(".rps__image").hide();
 
   // Set underlines when hovering navigation dropdown
   $(".subHeader__header--navReveal").hover(function () {
@@ -65,21 +96,34 @@ $(document).ready(function () {
   $("#commentButton").click(function (e) {
     let textToCheck = $("#makeComment").val();
     e.preventDefault();
-    if (textToCheck === "") {
+    if (textToCheck.trim() === "") {
       alert("Please write a comment first");
     } else {
-      let dt = new Date();
-      let dayToUse =
-        dt.getDate() + " : " + (dt.getMonth() + 1) + " : " + dt.getFullYear();
-      let commentToAppend =
-        "<p class='form__comment'>" +
-        dayToUse +
-        "<br>" +
-        "<b> Commentor said: </b> </br>" +
-        textToCheck +
-        "</p>";
-      $("#commentsContainer").append(commentToAppend);
+      commentArray = JSON.parse(localStorage.getItem("commentStorage"));
+      commentArray.push(textToCheck);
+      localStorage.setItem("commentStorage", JSON.stringify(commentArray));
+      newComment = commentMaker(textToCheck);
+
+      $("#commentsContainer").append(newComment);
       $("#makeComment").val("");
+    }
+  });
+
+  // Clear comments button function
+  $("#clearCommentButton").click(function (e) {
+    e.preventDefault();
+    let userDecision = prompt("Are you sure? (y/n)").toLowerCase();
+    switch (userDecision) {
+      case "y":
+        commentArray = [];
+        $("#commentsContainer").empty();
+        localStorage.setItem("commentStorage", JSON.stringify(commentArray));
+        break;
+      case "n":
+        alert("The comments will not be deleted.");
+        break;
+      default:
+        alert("We will assume you meant no, the comments will not be deleted.");
     }
   });
 
