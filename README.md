@@ -50,9 +50,10 @@ At the bottom of the home page there is a comments section where you can write c
 ![uncommentedComment](https://github.com/Nerrotok/MyFencingWebsite/assets/140401659/5f4be992-37e1-4d05-b14d-ad0c31d10c61)
 
 After writing a comment, you can post it by clicking comment.
-![postedComment](https://github.com/Nerrotok/MyFencingWebsite/assets/140401659/f9ee450b-4c64-49e8-ba2c-bca4c7b226a0)
+![postedComment](https://github.com/Nerrotok/MyFencingWebsite/assets/140401659/7314b1a9-139e-46aa-93a7-8e93c961d1e5)
 
-The comments are **not stored and will be removed if the page is refreshed**.
+
+The comments are stored on local storage. There is a clear comments button which will delete all comments from the html and local storage after a confirmation prompt.
 
 ### The Game of Fencing
 
