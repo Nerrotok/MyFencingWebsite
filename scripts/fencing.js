@@ -37,6 +37,10 @@ $(document).ready(function () {
     }
   }
 
+  if ($("#commentsContainer").children().length === 0) {
+    $("#clearCommentButton").hide();
+  }
+
   let stepArray = [
     "50px",
     "100px",
@@ -106,6 +110,7 @@ $(document).ready(function () {
 
       $("#commentsContainer").append(newComment);
       $("#makeComment").val("");
+      $("#clearCommentButton").slideDown().show();
     }
   });
 
@@ -118,6 +123,7 @@ $(document).ready(function () {
         commentArray = [];
         $("#commentsContainer").empty();
         localStorage.setItem("commentStorage", JSON.stringify(commentArray));
+        $("#clearCommentButton").slideUp().hide();
         break;
       case "n":
         alert("The comments will not be deleted.");
