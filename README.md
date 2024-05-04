@@ -49,7 +49,7 @@ The home contains general imformation about fencing including rules, history, ba
 At the bottom of the home page there is a comments section where you can write comments.
 ![uncommentedComment](https://github.com/Nerrotok/MyFencingWebsite/assets/140401659/5f4be992-37e1-4d05-b14d-ad0c31d10c61)
 
-After writing a comment, you can post it by clicking comment.
+After writing a comment, you can post it by clicking comment. After making a comment, the **Clear Comments** button will show
 ![postedComment](https://github.com/Nerrotok/MyFencingWebsite/assets/140401659/7314b1a9-139e-46aa-93a7-8e93c961d1e5)
 
 
