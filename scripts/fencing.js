@@ -1,4 +1,5 @@
 $(document).ready(function () {
+  // Functions
   // Function to make comments
   function commentMaker(textToComment) {
     let dt = new Date();
@@ -15,7 +16,31 @@ $(document).ready(function () {
     return comment;
   }
 
+  // function to make like objects
+  function likeObjectConstructor(id, liked) {
+    this.id = id;
+    this.liked = false;
+  }
+
+  // Function to assign likes or unlikes
+  function likeChanger(idToCheck) {
+    likeArray = JSON.parse(localStorage.getItem("likeStorage"));
+
+    for (i = 0; i < likeArray.length; i++) {
+      if (likeArray[i].id === idToCheck) {
+        if (likeArray[i].liked === false) {
+          likeArray[i].liked = true;
+        } else if (likeArray[i].liked === true) {
+          likeArray[i].liked = false;
+        }
+      }
+    }
+
+    localStorage.setItem("likeStorage", JSON.stringify(likeArray));
+  }
+
   // Conditions for website intialisation
+  // Set savedContentArray for local storage
   if (localStorage.getItem("savedContentStorage") === null) {
     let savedContentArray = [];
     localStorage.setItem(
@@ -24,6 +49,7 @@ $(document).ready(function () {
     );
   }
 
+  // Set commentArray for local storage and append comments to commentsContainer element
   if (localStorage.getItem("commentStorage") === null) {
     let commentArray = [];
     localStorage.setItem("commentStorage", JSON.stringify(commentArray));
@@ -37,10 +63,75 @@ $(document).ready(function () {
     }
   }
 
+  // Set likeObject for local storage
+  if (localStorage.getItem("likeStorage") === null) {
+    let introLike = new likeObjectConstructor("intro__likeButton", false);
+    let weaponsLike = new likeObjectConstructor("weapons__likeButton", false);
+    let historyLike = new likeObjectConstructor("history__likeButton", false);
+    let requirementsLike = new likeObjectConstructor(
+      "requirements__likeButton",
+      false
+    );
+    let learnLike = new likeObjectConstructor("learn__likeButton", false);
+    let winningLike = new likeObjectConstructor("winning__likeButton", false);
+    let gameLike = new likeObjectConstructor("game__likeButton", false);
+    let riskRewardLike = new likeObjectConstructor(
+      "riskReward__likeButton",
+      false
+    );
+    let winLike = new likeObjectConstructor("win__likeButton", false);
+    let examplesLike = new likeObjectConstructor("examples__likeButton", false);
+    let federationLike = new likeObjectConstructor(
+      "federation__likeButton",
+      false
+    );
+    let popularLike = new likeObjectConstructor("popular__likeButton", false);
+    let expensiveLike = new likeObjectConstructor(
+      "expensive__likeButton",
+      false
+    );
+    let competingLike = new likeObjectConstructor(
+      "competing__likeButton",
+      false
+    );
+
+    let likeArray = [
+      introLike,
+      weaponsLike,
+      historyLike,
+      requirementsLike,
+      learnLike,
+      winningLike,
+      gameLike,
+      riskRewardLike,
+      winLike,
+      examplesLike,
+      federationLike,
+      popularLike,
+      expensiveLike,
+      competingLike,
+    ];
+
+    localStorage.setItem("likeStorage", JSON.stringify(likeArray));
+  } else {
+    // Continue here
+    likeArray = JSON.parse(localStorage.getItem("likeStorage"));
+    for (i = 0; i < likeArray.length; i++) {
+      if (likeArray[i].liked === true) {
+        $("#" + likeArray[i].id).empty();
+        $("#" + likeArray[i].id).append(
+          "<svg xmlns='http://www.w3.org/2000/svg' class='likedHeart' width='24' height='24' viewBox='0 0 24 24'><path d='M12 4.248c-3.148-5.402-12-3.825-12 2.944 0 4.661 5.571 9.427 12 15.808 6.43-6.381 12-11.147 12-15.808 0-6.792-8.875-8.306-12-2.944z'/></svg>"
+        );
+      }
+    }
+  }
+
+  // Hide clearCommentButton if no comments
   if ($("#commentsContainer").children().length === 0) {
     $("#clearCommentButton").hide();
   }
 
+  // initialise stepArray for animation
   let stepArray = [
     "50px",
     "100px",
@@ -191,11 +282,13 @@ $(document).ready(function () {
       $(this).append(
         "<svg xmlns='http://www.w3.org/2000/svg' class='likedHeart' width='24' height='24' viewBox='0 0 24 24'><path d='M12 4.248c-3.148-5.402-12-3.825-12 2.944 0 4.661 5.571 9.427 12 15.808 6.43-6.381 12-11.147 12-15.808 0-6.792-8.875-8.306-12-2.944z'/></svg>"
       );
+      likeChanger($(this).attr("id"));
     } else if ($(this).find("svg.likedHeart").length > 0) {
       $(this).empty();
       $(this).append(
         "<svg xmlns='http://www.w3.org/2000/svg' class='likeHeart' width='24' height='24' viewBox='0 0 24 24'><path d='M12 9.229c.234-1.12 1.547-6.229 5.382-6.229 2.22 0 4.618 1.551 4.618 5.003 0 3.907-3.627 8.47-10 12.629-6.373-4.159-10-8.722-10-12.629 0-3.484 2.369-5.005 4.577-5.005 3.923 0 5.145 5.126 5.423 6.231zm-12-1.226c0 4.068 3.06 9.481 12 14.997 8.94-5.516 12-10.929 12-14.997 0-7.962-9.648-9.028-12-3.737-2.338-5.262-12-4.27-12 3.737z'/></svg>"
       );
+      likeChanger($(this).attr("id"));
     }
   });
 
@@ -205,14 +298,26 @@ $(document).ready(function () {
       $("#rockHand").slideDown().show();
       $("#paperHand").hide();
       $("#scissorsHand").hide();
+      $("#drawImage").hide();
+      $("#winImage").hide();
+      $("#loseImage").hide();
+      $("#bartEyes").show();
     } else if ($("#paperButton").is(":checked")) {
       $("#rockHand").hide();
       $("#paperHand").slideDown().show();
       $("#scissorsHand").hide();
+      $("#drawImage").hide();
+      $("#winImage").hide();
+      $("#loseImage").hide();
+      $("#bartEyes").show();
     } else if ($("#scissorsButton").is(":checked")) {
       $("#rockHand").hide();
       $("#paperHand").hide();
       $("#scissorsHand").slideDown().show();
+      $("#drawImage").hide();
+      $("#winImage").hide();
+      $("#loseImage").hide();
+      $("#bartEyes").show();
     }
   });
 
@@ -256,6 +361,7 @@ $(document).ready(function () {
       .animate({ top: "0px" });
   }
 
+  // play the animation
   $(".animation__button").click(function () {
     for (i = 0; i < stepArray.length; i++) {
       step(stepArray[i]);
